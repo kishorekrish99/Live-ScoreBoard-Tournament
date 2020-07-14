@@ -1,0 +1,353 @@
+<div class="wrapper d-flex align-items-stretch">
+    <app-sidebar></app-sidebar>
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <app-nav></app-nav>
+        <br><br>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Create Match</li>
+            </ol>   
+        </nav>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card" style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+                background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                    <div class="card-body">
+                        <form #match="ngForm" (ngSubmit)="creatematch(match)">
+                            
+                            <div class="form-group">
+                                <label for="teamAname" class="bmd-label-floating">Team A Name</label>
+                                <input type="text" name="teamAname" id="teamAname" class="form-control" ngModel required>
+                            </div>
+                            <div class="form-group">
+                                <label for="coachAname" class="bmd-label-floating">Team A Coach Name</label>
+                                <input type="text" name="coachAname" id="coachAname" class="form-control" ngModel
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="teamAmanager" class="bmd-label-floating">Team A Manager</label>
+                                <input type="text" name="teamAmanager" id="teamAmanager" class="form-control" ngModel required>
+                            </div>
+                            <div class="form-group">
+                                <div id="accordion" class="card" style="border-radius: 15px;">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mt-5" style="font-weight: 100;">
+                                            Team A Details
+                                            <button type="button" class="btn btn-link pull-right card" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne" style="border-radius: 50%;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+                                      background: rgba(255, 255, 255, 0.90);">
+                                                <i class="fa fa-chevron-down fa-1x "></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                        data-parent="#accordion">
+                                        <div class="card-body">
+                                            <div class="scrollcontent">
+                                                <form #teamAdetails="ngForm" (ngSubmit)="teamAsubmit(teamAdetails)">
+                                                    <div class="form-group">
+                                                        <label for="player1" class="bmd-label-floating">Player 1</label>
+                                                        <input type="text" name="player1" id="player1" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player2" class="bmd-label-floating">Player 2</label>
+                                                        <input type="text" name="player2" id="player2" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player3" class="bmd-label-floating">Player 3</label>
+                                                        <input type="text" name="player3" id="player3" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player4" class="bmd-label-floating">Player 4</label>
+                                                        <input type="text" name="player4" id="player4" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player5" class="bmd-label-floating">Player 5</label>
+                                                        <input type="text" name="player5" id="player5" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player6" class="bmd-label-floating">Player 6</label>
+                                                        <input type="text" name="player6" id="player6" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player7" class="bmd-label-floating">Player 7</label>
+                                                        <input type="text" name="player7" id="player7" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player8" class="bmd-label-floating">Player 8</label>
+                                                        <input type="text" name="player8" id="player8" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player9" class="bmd-label-floating">Player 9</label>
+                                                        <input type="text" name="player9" id="player9" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player10" class="bmd-label-floating">Player 10</label>
+                                                        <input type="text" name="player10" id="player10" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player11" class="bmd-label-floating">Player 11</label>
+                                                        <input type="text" name="player11" id="player11" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="substitute" class="bmd-label-floating">Substitute</label>
+                                                        <input type="text" name="substitute" id="substitute" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="float-right">
+                                                        <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                                            style="border-radius: 15px;" [disabled]="!teamAdetails.valid">Submit</button>
+                    
+                                                    </div><br><br>
+                                                    <div class="float-right">
+                                                        <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><br>
+                            </div>
+                            <div class="form-group">
+                                <label for="teamBname" class="bmd-label-floating">Team B Name</label>
+                                <input type="text" name="teamBname" id="teamBname" class="form-control" ngModel required>
+                            </div>
+                            <div class="form-group">
+                                <label for="coachBname" class="bmd-label-floating">Team B Coach Name</label>
+                                <input type="text" name="coachBname" id="coachBname" class="form-control" ngModel
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="teamBmanager" class="bmd-label-floating">Team B Manager</label>
+                                <input type="text" name="teamBmanager" id="teamBmanager" class="form-control" ngModel required>
+                            </div>
+                            <div class="form-group">
+                                <div id="accordion2" class="card" style="border-radius: 15px;">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mt-5" style="font-weight: 100;">
+                                            Team B Details
+                                            <button type="button" class="btn btn-link pull-right card" data-toggle="collapse"
+                                                data-target="#collapse2" aria-expanded="true"
+                                                aria-controls="collapseOne" style="border-radius: 50%;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+                                      background: rgba(255, 255, 255, 0.90);">
+                                                <i class="fa fa-chevron-down fa-1x "></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapse2" class="collapse" aria-labelledby="headingOne"
+                                        data-parent="#accordion2">
+                                        <div class="card-body">
+                                            <div class="scrollcontent">
+                                                <form #teamBdetails="ngForm" (ngSubmit)="teamBsubmit(teamBdetails)">
+                                                    <div class="form-group">
+                                                        <label for="player1" class="bmd-label-floating">Player 1</label>
+                                                        <input type="text" name="player1" id="player1" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player2" class="bmd-label-floating">Player 2</label>
+                                                        <input type="text" name="player2" id="player2" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player3" class="bmd-label-floating">Player 3</label>
+                                                        <input type="text" name="player3" id="player3" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player4" class="bmd-label-floating">Player 4</label>
+                                                        <input type="text" name="player4" id="player4" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player5" class="bmd-label-floating">Player 5</label>
+                                                        <input type="text" name="player5" id="player5" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player6" class="bmd-label-floating">Player 6</label>
+                                                        <input type="text" name="player6" id="player6" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player7" class="bmd-label-floating">Player 7</label>
+                                                        <input type="text" name="player7" id="player7" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player8" class="bmd-label-floating">Player 8</label>
+                                                        <input type="text" name="player8" id="player8" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player9" class="bmd-label-floating">Player 9</label>
+                                                        <input type="text" name="player9" id="player9" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player10" class="bmd-label-floating">Player 10</label>
+                                                        <input type="text" name="player10" id="player10" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="player11" class="bmd-label-floating">Player 11</label>
+                                                        <input type="text" name="player11" id="player11" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="substitute" class="bmd-label-floating">Substitute</label>
+                                                        <input type="text" name="substitute" id="substitute" class="form-control"
+                                                            ngModel required>
+                                                    </div>
+                                                    <div class="float-right">
+                                                        <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                                            style="border-radius: 15px;" [disabled]="!teamBdetails.valid">Submit</button>
+                    
+                                                    </div><br><br>
+                                                    <div class="float-right">
+                                                        <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="toss" class="bmd-label-floating">Toss</label>
+                                <select class="form-control" id="toss" name="toss" ngModel required>
+                                    <option selected>Choose..</option>
+                                    <option>teamA</option>
+                                    <option>teamB</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="location" class="bmd-label-floating">Overs</label>
+                                <input type="number" name="overs" id="overs" class="form-control" ngModel required>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="date" class="bmd-label-floating">Date</label>
+                                <input type="date" name="date" class="form-control" ngModel required>
+                            </div> -->
+                            <!-- <div class="form-group">
+                                <label for="isactive" class="bmd-label-floating">IsActive</label>
+                                <select class="form-control" id="isactive" name="isactive" ngModel required>
+                                    <option selected>Choose...</option>
+                                    <option>true</option>
+                                    <option>false</option>
+                                </select>
+                            </div> -->
+                            <!-- <div class="form-group">
+                                <label for="admin" class="bmd-label-floating">Admin</label>
+                                <select class="form-control" id="admin" name="admin" ngModel required>
+                                    <option >Choose..</option>
+                                    <option *ngFor="let x of users" value="{{x}}">{{x}}</option>        
+                                </select>
+                            </div> -->
+                            <div class="float-right">
+                                <button type="submit" class="btn btn-raised btn-info" style="border-radius: 15px;"
+                                    [disabled]="!match.valid">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="card-header"
+                    style="background: coral;background-image: linear-gradient(-90deg, white, coral);">
+                    <h4 style="font-weight: 100; color: white;">My Matches</h4>
+                </div>
+                <br>
+                <div id="accordion3">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mt-5" style="font-weight: 100;">
+                                India vs Pakistan
+                                <button class="btn btn-link pull-right card" data-toggle="collapse"
+                                    data-target="#collapse3" aria-expanded="true" aria-controls="collapseOne" style="border-radius: 50%;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+                          background: rgba(255, 255, 255, 0.90);">
+                                    <i class="fa fa-chevron-down fa-1x "></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse3" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordion3">
+                            <div class="card-body">
+                                <table class="table">
+                                      <tbody>
+                                          <tr>
+                                             <td>Virat</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Rohit</td>
+                                          </tr>
+                                      </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div><br>
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mt-5" style="font-weight: 100;">
+                                RCB vs MI
+                                <button class="btn btn-link collapsed pull-right card" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="border-radius: 50%; box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+                          background: rgba(255, 255, 255, 0.90);">
+                                    <i class="fa fa-chevron-down fa-1x"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                               RCB waiting for a win
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mt-5" style="font-weight: 100;">
+                                KKR vs CSK
+                                <button class="btn btn-link collapsed pull-right card" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                                    style="border-radius: 50%; box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+                          background: rgba(255, 255, 255, 0.90);">
+                                    <i class="fa fa-chevron-down fa-1x"></i>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordion">
+                            <div class="card-body">
+                                Won by Chennai Super King
+                            </div>
+                        </div>
+                    </div><br>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

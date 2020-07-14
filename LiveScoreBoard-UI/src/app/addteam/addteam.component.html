@@ -1,0 +1,469 @@
+<div class="wrapper d-flex align-items-stretch">
+    <app-sidebar></app-sidebar>
+    <div id="content" class="p-4 p-md-5 pt-5">
+        <app-nav></app-nav>
+        <br><br>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                <li class="breadcrumb-item" routerLink="/dashboard"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add Team</li>
+            </ol>
+        </nav>
+        <br>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="teamname" class="bmd-label-floating">Team Name</label>
+                <input type="text" name="teamname" id="teamname" class="form-control" [(ngModel)]="teamname"
+                    [ngModelOptions]="{standalone: true}" required>
+            </div>
+            <button class="col-md-1 btn">Submit</button>
+        </div>
+        <div class="row">
+            <div class="scrollcontent">
+                <div>
+                    <div class="card " style="box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 1</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 2</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 3</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 4</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 5</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 6</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 7</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 8</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 9</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 10</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <div class="card " style="align-content: center;box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+         background: rgba(255, 255, 255, 0.90); border-radius: 10px;">
+                        <div class="card-body">
+                            <form #player="ngForm" (ngSubmit)="submitplayer(player)">
+                                <h3 class="text-center" style="color: tomato;">Player 11</h3>
+                                <div class="form-group">
+                                    <label for="name" class="bmd-label-floating">Name</label>
+                                    <input type="text" name="name" id="name" class="form-control" ngModel required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="bmd-label-floating">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control" ngModel required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleSelect1" class="bmd-label-floating">Role</label>
+                                    <select class="form-control" id="exampleSelect1" name="role" ngModel required>
+                                        <option selected>Choose...</option>
+                                        <option>Batsman</option>
+                                        <option>Bowler</option>
+                                        <option>All Rounder</option>
+                                    </select>
+                                </div>
+
+                                <div class="float-right">
+                                    <button type="submit" class="btn btn-raised btn-info btn-sm"
+                                        style="border-radius: 15px;" [disabled]="!player.valid">Submit</button>
+
+                                </div><br><br>
+                                <div class="float-right">
+                                    <small class="form-text text-muted"><b>You must click submit here</b></small>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="text-center">
+                    <button class="btn btn-raised btn-success btn-sm" style="border-radius: 15px;">Add Team</button>
+                    <small class="form-text text-muted"><b>You must click here to submit all your team
+                            details</b></small>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+</div>

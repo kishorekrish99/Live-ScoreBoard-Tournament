@@ -1,0 +1,91 @@
+<br>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/livescore">LiveScore</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Scorecard</li>
+        </ol>
+    </nav>
+    <br><br>
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" style="border-radius: 15px; font-weight: 100;">
+                    <div class="card-header card-header-primary" style="border-radius: 5px;">
+                        <h4 class="card-title text-white">Batting Details for Team A</h4>
+
+                    </div>
+                    <div class="card-body">
+
+                        <hr>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th style="color: #9c27b0;">
+                                        Batsman
+                                    </th>
+                                    <th style="color: #9c27b0;">
+                                        Status
+                                    </th>
+                                    <th style="color: #9c27b0;">
+                                        Runs
+                                    </th>
+                                   
+                                    <th style="color: #9c27b0;">
+                                        4s
+                                    </th>
+                                    <th style="color: #9c27b0;">
+                                        6s
+                                    </th>
+                                    <th style="color: #9c27b0;">
+                                        SR
+                                    </th>
+                                    <th style="color: #9c27b0;">
+                                        Total
+                                    </th>
+                                </thead>
+                                <tbody *ngFor="let x of allbattingdetails">
+                                    <tr>
+                                        <td>
+                                            {{x.name}}
+                                        </td>
+                                        <td>
+
+                                            {{x.status}}
+                                        </td>
+                                        <td>
+                                            {{x.runs}}
+                                        </td>
+                                        <td>
+                                            {{x.four}}
+                                        </td>
+                                        <td>
+                                            {{x.six}}
+                                        </td>
+                                        <td>
+                                            {{x.sr}}
+                                        </td>
+                                        <td>
+                                            {{x.total}}
+                                        </td>
+                                       
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <hr>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    

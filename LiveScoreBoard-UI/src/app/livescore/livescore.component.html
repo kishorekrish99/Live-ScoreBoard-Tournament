@@ -1,0 +1,173 @@
+<br>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Live Score</li>
+        </ol>
+    </nav>
+    <br>
+    <h5>INDIA vs PAKISTAN</h5>
+    <small>India 8/1 (1.5)</small>
+
+    
+    <div class="btn-group-justified row">
+        <div class="btn-group col-md-6" role="group">
+            <button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/scorecard">Scorecard</button>
+        </div>
+        <div class="btn-group col-md-5" role="group">
+            <a type="button" class="btn btn-primary btn-lg btn-block" routerLink="/statistics" (click)="showbarchart()">Show Statistics</a>
+        </div>
+    </div>
+    <br><br>
+    
+    <div  class="row">
+        <div class="col-md-12">
+            <div class="card" style="border-radius: 15px; font-weight: 100;">
+                <div class="card-header card-header-primary" style="border-radius: 5px; background: coral;">
+                    <h4 class="card-title text-white">Live Score</h4>
+
+                </div>
+                <div class="card-body">
+
+                    <hr>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th style="color: #9c27b0;">
+                                    Batsman
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    Status
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    Runs
+                                </th>
+                               
+                                <th style="color: #9c27b0;">
+                                    4s
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    6s
+                                </th>
+                                
+                                <th style="color: #9c27b0;">
+                                    SR
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    Total
+                                </th>
+                            </thead>
+                            <tbody *ngFor="let score of scores">
+                                <tr>
+                                    <td>
+                                        {{score.name}}
+                                    </td>
+                                    <td>
+                                        {{score.status}}
+                                    </td>
+                                    <td>
+                                        {{score.runs}}
+                                    </td>
+
+                                    <td>
+                                        {{score.four}}
+                                    </td>
+                                    <td>
+                                        {{score.six}}
+                                    </td>
+
+                                    <td>
+                                        {{score.sr}}
+                                    </td>
+                                    <td>
+                                        {{score.total}}
+                                    </td>
+                                  
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <hr>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead class=" text-primary">
+                                <th style="color: #9c27b0;">
+                                    Bowler
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    Runs
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    Overs
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    Wickets
+                                </th>
+                                <th style="color: #9c27b0;">
+                                    Wide
+                                </th>
+                               
+                                <th style="color: #9c27b0;">
+                                    NoBall
+                                </th>
+                               
+                                <th style="color: #9c27b0;">
+                                    Economy
+                                </th>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <td>
+                                        Bumrah
+                                    </td>
+                                    <td>
+                                        10
+                                    </td>
+                                    <td>
+                                        1.5
+                                    </td>
+                                    <td>
+                                        3
+                                    </td>
+                                    <td>
+                                        0
+                                    </td>
+                                    <td>
+                                        0
+                                    </td>
+                                    <td>
+                                        0.0
+                                    </td>
+                                
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+                        <hr>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <br><br>
+    
+    <div class="card" style="border-radius: 15px;">
+        <div class="card-body">
+           
+                     <canvas id ="mychart"></canvas>
+               
+        </div>
+    </div>
+    
+    <br><br>
+   
+</div>

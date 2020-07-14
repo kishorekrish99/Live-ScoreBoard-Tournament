@@ -1,0 +1,69 @@
+.card-header-primary{
+    background: linear-gradient(60deg,#ab47bc,#8e24aa);
+    background-image: linear-gradient(60deg, rgb(171, 71, 188), rgb(142, 36, 170));
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    /* background-repeat-x: initial;
+    background-repeat-y: initial; */
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+   }
+   .card-header{
+    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin-top: -15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    /* margin-bottom: -15px; */
+    padding: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+   }
+  .btnstyle{
+    color: #fff;
+    background-color: #9c27b0;
+    border-color: #9c27b0;
+    border-top-color: rgb(156, 39, 176);
+    border-right-color: rgb(156, 39, 176);
+    border-bottom-color: rgb(156, 39, 176);
+    border-left-color: rgb(156, 39, 176);
+    box-shadow: 0 2px 2px 0 rgba(156,39,176,.14), 0 3px 1px -2px rgba(156,39,176,.2), 0 1px 5px 0 rgba(156,39,176,.12);
+  }
+  body {
+    min-height: 100vh;
+  
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 100%);
+  }
+
+  .modal-dialog-full-width {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width:none !important;
+
+}
+
+.modal-content-full-width  {
+    height: auto !important;
+    min-height: 100% !important;
+    border-radius: 0 !important;
+    background-color: white !important 
+}
+
+.modal-header-full-width  {
+    border-bottom: 1px solid white !important;
+}
+
+.modal-footer-full-width  {
+    border-top: 1px solid white !important;
+}

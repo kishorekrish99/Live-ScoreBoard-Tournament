@@ -1,0 +1,155 @@
+<app-mainnav></app-mainnav>
+
+<div class="jumbotron jumbotron-fluid">
+    <div *ngIf="isloading" style="text-align: center;">
+        <app-spinner></app-spinner>
+    </div>
+    <div class="container">
+        <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+            <div class="container">
+                <div class="card login-card">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <img src="https://www.bootstrapdash.com/demo/login-template-free-2/assets/images/login.jpg"
+                                alt="login" class="login-card-img">
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card-body">
+                                <div class="brand-wrapper">
+                                </div>
+                                <p class="login-card-description">Register Now</p>
+                                <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+                                    <div class="form-row">
+                                      
+                                        <div class="form-group col-md-12">
+                                            <label for="fullname" class="bmd-label-floating">Full Name</label>
+                                            <input type="text" class="form-control" id="fullname" required ngModel
+                                                name="fullname">
+                                        </div>
+
+
+                                      
+
+                                        <div class="form-group col-md-12">
+                                            <label for="email" class="bmd-label-floating">Email address</label>
+                                            <input type="email" class="form-control" id="email" name="email" ngModel
+                                                email required>
+                                            <span class="bmd-help">We'll never share your email with anyone else.</span>
+                                        </div>
+
+                                        
+                                        <div class="form-group col-md-12">
+                                            <label for="password" class="bmd-label-floating">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                ngModel password required minlength="8">
+                                        </div>
+                                    </div>
+                                   
+
+                                    <div class="form-group">
+                                        <label for="confirmpassword" class="bmd-label-floating">Confirm Password</label>
+                                        <input type="password" class="form-control" name="confirmpassword"
+                                            id="confirmpassword" ngModel password required minlength="8">
+                                    </div>
+
+                                    
+                                   
+                                    <div class="form-group">
+                                        <label for="mobilenumber" class="bmd-label-floating">Mobile Number</label>
+                                        <input type="number" min=0 oninput="validity.valid||(value='');" class="form-control" id="mobilenumber" name="mobilenumber"
+                                            ngModel required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="city" class="bmd-label-floating">City</label>
+                                        <input type="text" class="form-control" id="city" name="city" ngModel required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleSelect1" class="bmd-label-floating">State</label>
+                                        <select class="form-control" id="exampleSelect1" name="state" ngModel required>
+                                            <option selected>Choose...</option>
+                                            <option>Andhra Pradesh</option>
+                                            <option>Arunachal Pradesh</option>
+                                            <option>Assam</option>
+                                            <option>Bihar</option>
+                                            <option>Chattisgarh</option>
+                                            <option>Goa</option>
+                                            <option>Gujarat</option>
+                                            <option>Haryana</option>
+                                            <option>Himachal Pradesh</option>
+                                            <option>Jharkhand</option>
+                                            <option>Karnataka</option>
+                                            <option>Kerala</option>
+                                            <option>Madhya Pradesh</option>
+                                            <option>Maharastra</option>
+                                            <option>Manipur</option>
+                                            <option>Meghalaya</option>
+                                            <option>Mizoram</option>
+                                            <option>Nagaland</option>
+                                            <option>Odisha</option>
+                                            <option>Punjab</option>
+                                            <option>Rajasthan</option>
+                                            <option>Sikkim</option>
+                                            <option>TamilNadu</option>
+                                            <option>Telangana</option>
+                                            <option>Tripura</option>
+                                            <option>Uttar Pradesh</option>
+                                            <option>Uttarakhand</option>
+                                            <option>WestBengal</option>
+                                        </select>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-block login-btn"
+                                        [disabled]="!authForm.valid">Register</button>
+                                </form>
+                                <nav class="login-card-footer-nav">
+                                    <a href="#!">Terms of use.</a>
+                                    <a href="#!">Privacy policy</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <br><br>
+
+    <button type="button" id="modalpop" hidden="true" class="btn btn-primary" data-toggle="modal"
+        data-target="#modalPoll-1">Launch
+        modal</button>
+
+    <!-- Modal: modalPoll -->
+    <div class="modal fade" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-full-height  modal-dialog-centered modal-notify modal-info" role="document">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header" style="background-color: #FF3547; height: 60px;">
+                    <p class="heading lead" style="color: white;">Hostel Management
+                    </p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">×</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    {{message}}
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a type="button" style=" color: white;" class="btn btn-success btn-raised  waves-effect waves-light"
+                        data-dismiss="modal" style="border-radius: 15px;">Submit
+                        <i class="fa fa-paper-plane ml-1"></i>
+                    </a>&nbsp;
+                    <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal"
+                        style="border-radius: 15px;">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<app-footer></app-footer>

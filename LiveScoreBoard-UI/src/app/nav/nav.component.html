@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-dark "
+                style="background-color:#673ab7; box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31); border-radius: 10px; font-family: Georgia, 'Times New Roman', Times, serif;">
+                <button type="button" id="sidebarCollapse" class="btn btn-success">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+                <button class="navbar-toggler btn btn-success" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" routerLink="" routerLinkActive="active-link">Home </a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link text-white" routerLink="/dashboard" routerLinkActive="active-link">Dashboard </a>
+                        </li> 
+                                
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <!-- text-white -->
+                                <i class="fa fa-bell fa-1x text-white"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown col-md-1 col-xs-1 col-sm-11 mr-md-5">
+                            <a class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user fa-1x text-white"></i>&nbsp;&nbsp;
+                            </a>
+                            <div class="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" routerLink="/myprofile">My Profile Page</a>
+                                <a class="dropdown-item" (click)="logout()" style="cursor: pointer;">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>

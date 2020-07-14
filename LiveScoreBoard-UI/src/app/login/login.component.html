@@ -1,0 +1,40 @@
+<app-mainnav></app-mainnav>
+<br><br>
+<div *ngIf="isloading" style="text-align: center;">
+<app-spinner></app-spinner>
+</div>
+<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+  <div class="container">
+    <div class="card login-card">
+      <div class="row no-gutters">
+        <div class="col-md-5">
+          <img src="../../assets/login-1.PNG" alt="login" class="login-card-img">
+        </div>
+        <div class="col-md-5">
+          <div class="card-body">
+            <div class="brand-wrapper">
+                <!-- <h4>ScoreBoard</h4> -->
+              
+            </div>
+            <p class="login-card-description">Sign into your Score Board Admin account</p>
+          
+            <button name="login" id="login"  class="btn btn-block login-btn mb-4 auth" (click)="authenticate()" 
+                 value="Login">Login</button>
+             <b> &copy;  Scoreboard-virtusa</b>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<br><br>
+
+
+    <!-- Modal: modalPoll -->
+    
+
+
+<app-footer></app-footer>
